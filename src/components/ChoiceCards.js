@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function ChoiceCards(props) {
-    console.log("Props:", props);
     return (
         <div className={`choice-card ${props.winner ? 'winner' : 'loser'}`}>
             <h1>{props.title}</h1>
