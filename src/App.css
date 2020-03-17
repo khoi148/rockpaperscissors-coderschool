@@ -1,3 +1,7 @@
+body {
+  padding-top: 50px;
+  background-color: #e9ebee;
+}
 .red {
   background-color: red;
 }
@@ -13,7 +17,6 @@
   display: flex;
   min-height: 100vh;
   text-align: center;
-  background-color: #e9ebee;
 }
 .choice-card {
   flex: 1;
@@ -45,4 +48,18 @@ h1 {
 .loser {
   color: red;
   border: 10px solid red;
+}
+.tie {
+  color: black;
+  border: 10px solid black;
+}
+.start {
+  color: goldenrod;
+  border: 10px solid goldenrod;
+}
+.transparent {
+  background-color: transparent;
+}
+.displayNone {
+  display: none !important;
 }
