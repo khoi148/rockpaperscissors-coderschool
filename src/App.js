@@ -58,10 +58,9 @@ export default class App extends React.Component {
     } else {
       this.setState({ previousWinner: "Tie" });
     }
-    const newUserChoice = choices[playerChoice]; //object like Rock: {name: , url: }
-    const newComputerChoice = choices[compChoice];
-    this.setState({ userChoice: newUserChoice });
-    this.setState({ computerChoice: newComputerChoice });
+    //choices is an object, holding 3 objects in util/index.js. Each object has a name & img url property for rock/paper/scissors.
+    this.setState({ userChoice: choices[playerChoice] });
+    this.setState({ computerChoice: choices[compChoice] });
     this.setState({ state: result });
     // cannot push directly to an array state, still need to update
     this.setState(
@@ -100,7 +99,8 @@ export default class App extends React.Component {
                 title="Computer"
                 winner={this.state.previousWinner}
                 imgURL={
-                  this.state.computerChoice && this.state.computerChoice.imgURL
+                  this.state.computerChoice !== null &&
+                  this.state.computerChoice.imgURL
                 }
               />
               <h1 id="test" className={`${this.promptColor()} border-0`}>
